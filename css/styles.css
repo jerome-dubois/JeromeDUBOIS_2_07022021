@@ -447,9 +447,9 @@ nav li a:hover {
 
 /*END ACCOMMODATIONS*/
 
-/*RESPONSIVE ACCOMMODATIONS 1300px*/
+/*RESPONSIVE ACCOMMODATIONS 1200px*/
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1200px) {
     
     #accommodations {
         width: 100%;
@@ -483,8 +483,92 @@ nav li a:hover {
     }*/
     /*END RESPONSIVE POPULAR ACCOMMODATIONS*/    
 }
-/*END RESPONSIVE ACCOMMODATIONS 1300px*/
+/*END RESPONSIVE ACCOMMODATIONS 1200px*/
 
 /*ACTIVITIES*/
 
+#activitiesContainer {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#activitiesContainer a img {
+    height: 130px;
+
+    object-fit: cover;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+#activitiesList a {
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: -2px 0 8px #c5c5c5;
+    padding:5px;
+    margin-top: 20px;
+    /*margin-bottom: 20px;*/
+    border-radius: 20px;
+    text-decoration: none;
+    color: black;
+}
+
 /*END ACTIVITIES*/
+
+/*RESPONSIVE ACTIVITIES*/
+
+@media screen and (min-width: 450px) and (max-width: 1200px) {
+
+    #activitiesContainer a img {
+        height: 200px;
+    }
+
+    #activitiesContainer a {
+        margin:0px;
+        margin-bottom: 20px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    #activitiesContainer {
+        width: 100%;
+    }
+    
+    #bloc2 {
+        display: flex;
+        flex-direction: column;
+        margin:0px 20px;
+        height: 400px;
+    }
+
+    #bloc4 {
+        display: flex;
+        flex-direction: column;
+        margin-left:20px;
+        /*height: 500px;*/ 
+    }
+
+    #activitiesList {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;    
+    }
+
+    #activitiesList > a {
+        width:25%
+    }
+    
+    #activitiesList > div {
+        width:25%
+    }
+
+    #activitiesList > a img {
+        height:100%
+    }
+}
+
+
+/*END RESPONSIVE ACTIVITIES*/
