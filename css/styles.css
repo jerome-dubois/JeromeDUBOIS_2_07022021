@@ -11,7 +11,7 @@ body {
 }
 
 h2 {
-    font-weight: 1000;
+    font-weight: bolder;
 }
 
 /* HEADER */
@@ -333,9 +333,9 @@ nav li a:hover {
     #cityAccommodationsContainer {
         display: flex;
         flex-direction: column;
-        
+        width: 90%;
         padding-top: 35px;
-        margin: 0 40px;
+        margin: auto;
         margin-bottom: 15px;
     }
 
@@ -411,9 +411,9 @@ nav li a:hover {
     #popularAccommodationsContainer {
         display: flex;
         flex-direction: column;
-        
+        width: 90%;
+        margin: auto;
         padding-top: 35px;
-        margin: 0 40px;
     }
 
     #popularAccommodationsContainer h2 {
@@ -494,6 +494,10 @@ nav li a:hover {
         border-radius: 20px;
         width: 32%;
         order: 2;
+    }
+
+    #popularAccommodationsContainer {
+        width: 80%;
     }
 
     /*END RESPONSIVE POPULAR ACCOMMODATIONS*/    
@@ -613,6 +617,7 @@ footer ul {
 
 #footerContenu {
     display: flex;
+    flex-wrap: wrap;
     padding: 30px 5%;
     margin: auto;
 }
@@ -625,5 +630,16 @@ footer ul {
     list-style: none;
 }
 
-
 /* END FOOTER */
+
+/* RESPONSIVE FOOTER */
+
+@media screen and (min-width: 600px) {
+
+    #footerContenu {
+        flex-wrap: nowrap;
+    }
+
+}
+
+/* END RESPONSIVE FOOTER */
