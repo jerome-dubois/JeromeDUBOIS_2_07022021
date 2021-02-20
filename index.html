@@ -3,14 +3,14 @@
     <head>
         <title>Projet 2 - Transformez une maquette en site web</title>
         <meta charset="utf-8" />           
-        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densityDpi=device-dpi" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
         <link rel="stylesheet" href="css/styles.css">
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700&display=swap" rel="stylesheet">
         <script src="https://kit.fontawesome.com/0fe1c064b7.js" crossorigin="anonymous"></script>
     </head>
     <body>  
         <div id="container">
+            <!-- header-->
             <header>
                 <nav>
                     <img id="logo" src="images/logo/Reservia.svg" alt="Logo de Reservia">
@@ -21,8 +21,10 @@
                     </ul>
                 </nav>
             </header>
-            
+            <!-- end header-->
+            <!-- main-->
             <main>
+                <!--section search-->
                 <section id="search">
                     <div>
                         <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
@@ -62,7 +64,9 @@
                         <span class="searchInfoIcon"><i class="fas fa-info"></i></i></span>                 
                         <p>Plus de 500 logements sont disponibles dans cette ville</p>
                     </div>
-                </section>           
+                </section>
+                <!--end section search-->
+                <!--section accommodations-->           
                 <section id="accommodations">
                     <section id="cityAccommodations">
                         <div id="cityAccommodationsContainer">
@@ -78,7 +82,7 @@
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star"></i>                                        
-                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star emptyStar"></i>
                                         </span>
                                     </div>   
                                 </a>
@@ -106,7 +110,7 @@
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star emptyStar"></i>
                                         </span>
                                     </div>                               
                                 </a>
@@ -119,8 +123,8 @@
                                             <i class="fas fa-star"></i>                                         
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star emptyStar"></i>
+                                            <i class="fas fa-star emptyStar"></i>
                                         </span>
                                     </div>                                
                                 </a>
@@ -134,7 +138,7 @@
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star emptyStar"></i>
                                         </span>
                                     </div>
                                 </a>
@@ -155,10 +159,12 @@
                             </div>
                             <h3>Afficher plus</h3> 
                         </div>                 
-                    </section>                
+                    </section>                             
                     <section id="popularAccommodations">
                         <div id="popularAccommodationsContainer">
-                            <h2>Les plus populaires</h2>
+                            <h2>Les plus populaires
+                                <i class="fas fa-chart-line"></i>
+                            </h2>
                             <a href="#">
                                 <img src="images/hebergements/4_small/emile-guillemot-unsplash.jpg" alt="Hôtel Le soleil du matin">
                                 <div class="popularAccommodationsDescription">
@@ -183,7 +189,7 @@
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star emptyStar"></i>
                                     </span>
                                 </div>                                
                             </a>
@@ -197,76 +203,117 @@
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star emptyStar"></i>
                                     </span>
                                 </div>                                
                             </a>                        
                         </div>
                     </section>		
                 </section>
+                <!--end section accommodations-->
+                <!--section activities-->
                 <section id="activities">
                     <div id="activitiesContainer">
                         <h2>Activités à Marseille</h2>
                         <div id="activitiesList">
                             <a href="#">
-                                <img src="images/activites/4_small/vieux-port.jpg" alt="Vieux port">
+                                <picture id="p1">
+                                    <source media="(max-width: 600px)" srcset="images/activites/4_small/vieux-port.jpg">
+                                    <source media="(min-width: 601px) and (max-width: 767px)" srcset="images/activites/3_medium/vieux-port.jpg">
+                                    <source media="(min-width: 768px) and (max-width: 991px)" srcset="images/activites/2_large/vieux-port.jpg">
+                                    <source media="(min-width: 992px)" srcset="images/activites/1_xlarge/vieux-port.jpg">
+                                    <img src="images/activites/3_medium/vieux-port.jpg" alt="Vieux port">
+                                </picture>                                
                                 <h3>Vieux port</h3>
                             </a>
                             <div id="bloc2">
                                 <a href="#">
-                                    <img src="images/activites/4_small/fort-de-pomegues.jpg" alt="Fort de Pomègues">
+                                    <picture>
+                                        <source media="(max-width: 600px)" srcset="images/activites/4_small/fort-de-pomegues.jpg">
+                                        <source media="(min-width: 601px) and (max-width: 767px)" srcset="images/activites/3_medium/fort-de-pomegues.jpg">
+                                        <source media="(min-width: 768px) and (max-width: 991px)" srcset="images/activites/2_large/fort-de-pomegues.jpg">
+                                        <source media="(min-width: 992px)" srcset="images/activites/1_xlarge/fort-de-pomegues.jpg">
+                                        <img src="images/activites/3_medium/fort-de-pomegues.jpg" alt="Fort de Pomègues">
+                                    </picture>                                   
                                     <h3>Fort de Pomègues</h3>
                                 </a>
                                 <a href="#">
-                                    <img src="images/activites/4_small/iles-du-frioul.jpg" alt="Îles du Frioul">
+                                    <picture>
+                                        <source media="(max-width: 600px)" srcset="images/activites/4_small/iles-du-frioul.jpg">
+                                        <source media="(min-width: 601px) and (max-width: 767px)" srcset="images/activites/3_medium/iles-du-frioul.jpg">
+                                        <source media="(min-width: 768px) and (max-width: 991px)" srcset="images/activites/2_large/iles-du-frioul.jpg">
+                                        <source media="(min-width: 992px)" srcset="images/activites/1_xlarge/iles-du-frioul.jpg">
+                                        <img src="images/activites/3_medium/iles-du-frioul.jpg" alt="Îles du Frioul">
+                                    </picture>                                 
                                     <h3>Îles du Frioul</h3>
                                 </a>
                             </div>
                             <a href="#">
-                                <img src="images/activites/4_small/parc-national-des-calanques.jpg" alt="Parc National des Calanques">
+                                <picture>
+                                    <source media="(max-width: 600px)" srcset="images/activites/4_small/parc-national-des-calanques.jpg">
+                                    <source media="(min-width: 601px) and (max-width: 767px)" srcset="images/activites/3_medium/parc-national-des-calanques.jpg">
+                                    <source media="(min-width: 768px) and (max-width: 991px)" srcset="images/activites/2_large/parc-national-des-calanques.jpg">
+                                    <source media="(min-width: 992px)" srcset="images/activites/1_xlarge/parc-national-des-calanques.jpg">
+                                    <img src="images/activites/3_medium/parc-national-des-calanques.jpg" alt="Parc National des Calanques">
+                                </picture>                                
                                 <h3>Parc National des Calanques</h3>
                             </a>
                             <div id="bloc4">
                                 <a href="#">
-                                    <img src="images/activites/4_small/notre-dame-de-la-garde.jpg" alt="Notre-Dame-de-la-Garde">
+                                    <picture>
+                                        <source media="(max-width: 600px)" srcset="images/activites/4_small/notre-dame-de-la-garde.jpg">
+                                        <source media="(min-width: 601px) and (max-width: 767px)" srcset="images/activites/3_medium/notre-dame-de-la-garde.jpg">
+                                        <source media="(min-width: 768px) and (max-width: 991px)" srcset="images/activites/2_large/notre-dame-de-la-garde.jpg">
+                                        <source media="(min-width: 992px)" srcset="images/activites/1_xlarge/notre-dame-de-la-garde.jpg">
+                                        <img src="images/activites/3_medium/notre-dame-de-la-garde.jpg" alt="Notre-Dame-de-la-Garde">
+                                    </picture>                                    
                                     <h3>Notre-Dame-de-la-Garde</h3>
                                 </a>
                                 <a href="#">
-                                    <img src="images/activites/4_small/parc-longchamp.jpg" alt="Parc Longchamp">
+                                    <picture>
+                                        <source media="(max-width: 600px)" srcset="images/activites/4_small/parc-longchamp.jpg">
+                                        <source media="(min-width: 601px) and (max-width: 767px)" srcset="images/activites/3_medium/parc-longchamp.jpg">
+                                        <source media="(min-width: 768px) and (max-width: 991px)" srcset="images/activites/2_large/parc-longchamp.jpg">
+                                        <source media="(min-width: 992px)" srcset="images/activites/1_xlarge/parc-longchamp.jpg">
+                                        <img src="images/activites/3_medium/parc-longchamp.jpg" alt="Parc Longchamp">
+                                    </picture>
                                     <h3>Parc Longchamp</h3>
                                 </a>
                             </div>                            
                         </div>
                     </div>  
                 </section>
+                <!--end section activities-->
             </main>
+            <!--end section main-->
+            <!--footer-->
             <footer>
                 <div id="footerContenu">
-                    <div class="footerColonne">
+                    <section class="footerColumn">
                         <h3>A propos</h3>
                         <ul>
-                            <p>Fonctionnement du site<br>
-                            Conditions générales de vente<br>
-                            Données et confidentialité</p>
+                            <li>Fonctionnement du site</li>
+                            <li>Conditions générales de vente</li>
+                            <li></li>Données et confidentialité</li>
                         </ul>
-                    </div>
-                    <div class="footerColonne">
+                    </section>
+                    <section class="footerColumn">
                         <h3>Nos hébergements</h3>
                         <ul>
-                            <p>Charte qualité<br>
-                            Soumettre votre hôtel</p>
+                            <li>Charte qualité</li>
+                            <li>Soumettre votre hôtel</li>                            
                         </ul>
-                        </ul>
-                    </div>
-                    <div class="footerColonne">
+                    </section>
+                    <section class="footerColumn">
                         <h3>Assistance</h3>
                         <ul>
-                            <p>Centre d'aide<br>
-                            Nous contacter</p>
+                            <li>Centre d'aide</li>
+                            <li>Nous contacter</li>                        
                         </ul>
-                    </div>
+                    </section>
                 </div>
             </footer>
-        </div>
+            <!--end footer-->
+        </div>             
     </body>
 </html>

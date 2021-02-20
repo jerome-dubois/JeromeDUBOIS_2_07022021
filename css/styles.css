@@ -6,14 +6,19 @@ body {
 
 #container {
 	width: 90%;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: auto;
+}
+
+h2 {
+    font-weight: 1000;
 }
 
 /* HEADER */
 
 header {
-	display: flex;
+	margin: auto;
+    display: flex;
     justify-content: space-between;
 }
 
@@ -104,7 +109,6 @@ nav li a:hover {
         padding-top: 45px;
     
         border-bottom: 0;
-        border-top: 4px solid #f2f2f2;
     }
 
     nav li a:hover {
@@ -188,7 +192,8 @@ nav li a:hover {
 
     #searchFilters p,
     #searchFilters li {
-        font-size: 20px;
+        height: 45px;
+        font-size: 19px;
         font-weight: 800;
     }
 
@@ -244,7 +249,7 @@ nav li a:hover {
 
     #searchInfo {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         align-items: baseline;
         margin-top: 20px;
     }
@@ -298,6 +303,10 @@ nav li a:hover {
 
 /*ACCOMMODATIONS*/
 
+.emptyStar {
+    color: #F2F2F2;
+}
+
 #accommodations {
     display: flex;
     flex-direction: column  ;
@@ -305,6 +314,11 @@ nav li a:hover {
     flex-wrap: wrap;
     width: 100%;
 }
+
+#accommodations h2 {
+    font-size: 20px;
+}
+
 
     /*CITY ACCOMMODATIONS*/
 
@@ -317,15 +331,13 @@ nav li a:hover {
     }
 
     #cityAccommodationsContainer {
-        width: 90%;
-        margin: auto;
-    }
-
-    /*#cityAccommodationsList {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }*/
+        flex-direction: column;
+        
+        padding-top: 35px;
+        margin: 0 40px;
+        margin-bottom: 15px;
+    }
 
     #cityAccommodationsList a {
         display: flex;
@@ -335,12 +347,10 @@ nav li a:hover {
         background-color: white;
         border-radius: 20px;
         color: black;
-        margin-top: 10px;
+        margin: 15px 0px;
 
         text-decoration: none;
-
-        box-shadow: -2px 0 8px #c5c5c5;
-        /*box-shadow: 2px 2px#c5c5c52c, -0.2em 0 0.4em #c5c5c5;*/
+        box-shadow: -2px 2px 8px #c5c5c5;
     }
 
     #cityAccommodationsList a img {
@@ -399,9 +409,16 @@ nav li a:hover {
     }
 
     #popularAccommodationsContainer {
-        width: 90%;
-        margin: auto;
-        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        
+        padding-top: 35px;
+        margin: 0 40px;
+    }
+
+    #popularAccommodationsContainer h2 {
+        display: flex;
+        justify-content: space-between;
     }
 
     #popularAccommodationsContainer a {
@@ -411,21 +428,24 @@ nav li a:hover {
         background-color: white;
         border-radius: 20px;
         color: black;
-        margin-top: 10px;
-
+        margin: 15px 0;
+        
+        box-shadow: -2px 2px 8px #c5c5c5;
         text-decoration: none;
     }
 
     #popularAccommodationsContainer a img {
-        height: 120px;
+        height: 135px;
         object-fit: cover;
         border-radius: 20px 0px 0px 20px;
-        width: 40%;
+        width: 35%;
     }
     
     .popularAccommodationsDescription {
-        height:100%;
-        margin: 10px;
+        position: relative;
+        width: 40%;
+        height:125px;
+        margin: 5px;
     }
 
     .popularAccommodationsDescription h3 {
@@ -439,6 +459,8 @@ nav li a:hover {
     }
 
     .popularAccommodationsDescription span {
+        position: absolute;
+        bottom: 0;
         font-size: 10px;
         color:#0065fc;
     }
@@ -447,9 +469,9 @@ nav li a:hover {
 
 /*END ACCOMMODATIONS*/
 
-/*RESPONSIVE ACCOMMODATIONS 1200px*/
+/*RESPONSIVE ACCOMMODATIONS 992px*/
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
     
     #accommodations {
         width: 100%;
@@ -458,15 +480,11 @@ nav li a:hover {
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: nowrap;
-        /*display: grid;
-        grid-template-columns: 65% 30%;
-        grid-column-gap: 5%;*/
     }
 
     /*RESPONSIVE CITY ACCOMMODATIONS*/
     #cityAccommodations {
         border-radius: 20px;
-        /*margin-right: 10%;*/
         width: 65%;
     }
     /*END RESPONSIVE CITY ACCOMMODATIONS*/
@@ -474,27 +492,29 @@ nav li a:hover {
     /*RESPONSIVE POPULAR ACCOMMODATIONS*/
     #popularAccommodations {
         border-radius: 20px;
-        width: 30%;
+        width: 32%;
         order: 2;
     }
 
-    /*#popularAccommodationsContainer a img {
-        width: 40%;
-    }*/
     /*END RESPONSIVE POPULAR ACCOMMODATIONS*/    
 }
-/*END RESPONSIVE ACCOMMODATIONS 1200px*/
+/*END RESPONSIVE ACCOMMODATIONS 992px*/
 
 /*ACTIVITIES*/
+
+#activities h2 {
+    font-size: 20px;
+}
 
 #activitiesContainer {
     width: 90%;
     margin: auto;
     margin-bottom: 20px;
+    padding: 20px 0;;
 }
 
 #activitiesContainer a img {
-    height: 130px;
+    height: 150px;
 
     object-fit: cover;
     width: 100%;
@@ -505,21 +525,23 @@ nav li a:hover {
     display: flex;
     flex-direction: column;
 
-    box-shadow: -2px 0 8px #c5c5c5;
-    padding:5px;
+    box-shadow: -2px 2px 8px #c5c5c5;
     margin-top: 20px;
-    /*margin-bottom: 20px;*/
     border-radius: 20px;
     text-decoration: none;
     color: black;
 }
 
+#activitiesList h3 {
+    padding-left: 15px;
+}
+
 /*END ACTIVITIES*/
 
-/*RESPONSIVE ACTIVITIES*/
+/*RESPONSIVE ACTIVITIES between 600px and 992px*/
 
-@media screen and (min-width: 450px) and (max-width: 1200px) {
-
+@media screen and (min-width: 600px) and (max-width: 992px) {
+         
     #activitiesContainer a img {
         height: 200px;
     }
@@ -531,7 +553,7 @@ nav li a:hover {
 
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 992px) {
 
     #activitiesContainer {
         width: 100%;
@@ -547,8 +569,7 @@ nav li a:hover {
     #bloc4 {
         display: flex;
         flex-direction: column;
-        margin-left:20px;
-        /*height: 500px;*/ 
+        margin-left:20px; 
     }
 
     #activitiesList {
@@ -558,17 +579,51 @@ nav li a:hover {
     }
 
     #activitiesList > a {
-        width:25%
+        width:25%;
     }
     
     #activitiesList > div {
         width:25%
     }
 
-    #activitiesList > a img {
-        height:100%
+    #activitiesList > a picture {
+        height:100%;
     }
+
+    #activitiesList > a:nth-child(3) img,
+    #activitiesList > a:nth-child(1) img {
+        height: 380px;
+    }
+
+}
+
+/*END RESPONSIVE ACTIVITIES*/
+
+/* END MAIN */
+
+/* FOOTER */
+
+footer {
+    background-color: #F2F2F2;
+}
+
+footer ul {
+    padding: 0;
+}
+
+#footerContenu {
+    display: flex;
+    padding: 30px 5%;
+    margin: auto;
+}
+
+.footerColumn {
+    padding-right:20%;
+}
+
+.footerColumn ul {
+    list-style: none;
 }
 
 
-/*END RESPONSIVE ACTIVITIES*/
+/* END FOOTER */
