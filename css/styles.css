@@ -389,7 +389,7 @@ nav li a:hover {
 
     .cityAccommodationsDescription p {
         font-size: 14px;
-        margin: 0;
+        margin: 5px 0;
     }
 
     .cityAccommodationsDescription span {
@@ -468,6 +468,7 @@ nav li a:hover {
 
     .popularAccommodationsDescription h3 {
         margin: 0;
+        margin-bottom: 10px;
         font-size: 15px;
     }
 
