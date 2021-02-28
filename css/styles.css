@@ -80,7 +80,6 @@ nav li a:hover {
 
     nav {
         height: 80px;
-        justify-content: flex-end;
         flex-wrap: nowrap;
         align-items: flex-end;
     }
@@ -104,6 +103,7 @@ nav li a:hover {
     }
 
     nav li a {
+        display: inline;
         width: auto;
         padding: 30px;
         padding-bottom: 0px;
@@ -361,7 +361,6 @@ nav li a:hover {
     #cityAccommodationsList a {
         display: flex;
         flex-direction: column;
-        height: 200px;
         padding: 5px;
         background-color: white;
         border-radius: 20px;
@@ -487,6 +486,22 @@ nav li a:hover {
     /*END POPULAR ACCOMMODATIONS*/
 
 /*END ACCOMMODATIONS*/
+
+/*RESPONSIVE ACCOMMODATIONS 601px - 991px*/
+
+@media screen and (min-width: 600px) and (max-width: 991px) {
+
+    #cityAccommodations {
+        margin-top: 40px;
+    }
+
+    #popularAccommodations {
+        padding-bottom: 20px;
+    }
+
+}
+
+/*END RESPONSIVE ACCOMMODATIONS 601px - 991px*/
 
 /*RESPONSIVE ACCOMMODATIONS 992px*/
 
@@ -635,15 +650,13 @@ footer ul {
     padding: 0;
 }
 
-#footerContenu {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 30px 5%;
-    margin: auto;
+footer li {
+    padding: 2% 0;
 }
 
-.footerColumn {
-    padding-right:20%;
+#footerContenu {
+    padding: 30px 5%;
+    margin: auto;
 }
 
 .footerColumn ul {
@@ -652,14 +665,19 @@ footer ul {
 
 /* END FOOTER */
 
-/* RESPONSIVE FOOTER */
+/* RESPONSIVE FOOTER 992px*/
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 992px) {
 
     #footerContenu {
+        display: flex;
+        justify-content: space-between;
         flex-wrap: nowrap;
     }
 
+    .footerColumn {
+        width: 30%;
+    }
 }
 
 /* END RESPONSIVE FOOTER */
